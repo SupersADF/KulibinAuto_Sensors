@@ -1,20 +1,15 @@
-# MPU6050 by Electronic Cats
+# KulibinAuto_platform
 
-MPU-6050 6-axis accelerometer/gyroscope Arduino Library
-adapted for Arduino Library Manager by Electronic Cats, Feb 2019
+KulibinAuto_platform это библиотека для управления платформой (моторами) официальной тележкой от KulibinClub
 
-The MPU6050 combines a 3-axis gyroscope and a 3-axis accelerometer on the same silicon die together with
-an onboard Digital Motion Processor(DMP) which processes complex 6-axis MotionFusion algorithms.
+в данной библиоетке собраны методы для управления моторами в режиме мощности, так же есть наличие обработки прерываний 
+для подсчета тиков энкодеров.
 
-### Original Library
+### О разработчике
 
-Based in the work of [https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050](https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050)
+Занимаюсь всем, что связано с робототехникой и автоматизацией процессов
 
-### Maintainer
-
-Electronic Cats invests time and resources providing this open source design, please support Electronic Cats and open-source hardware by purchasing products from Electronic Cats!
-
-### License
+### Лицензия
 
 MIT
 
