@@ -15,16 +15,26 @@ KulibinAuto_Sensors::KulibinAuto_Sensors() {
 
 float KulibinAuto_Sensors::getUltraDistance(uint8_t dimension) {
 	if (dimension == ULTRA_CM) {
-		return getTiming() / 58.0;
+		float dist = getTiming() / 58.0;
+		if (dist == 0) 
+			dist = 160;
+		return dist;
 	} else if (dimension == ULTRA_MM) {
-		return getTiming() / 5.8;
+		float dist = getTiming() / 5.8;
+		if (dist == 0) 
+			dist = 1600;
+		return dist;
 	} else if (dimension == ULTRA_M) {
-		return getTiming() / 5800.0;
+		float dist = getTiming() / 5800;
+		if (dist == 0) 
+			dist = 0.16;
+		return dist;
 	}
 }
 void KulibinAuto_Sensors::setServoAngle(int angle) {
 	myServo.attach(SERVO_PIN);
 	myServo.write(angle);
+
 }
 uint8_t KulibinAuto_Sensors::getReflect(uint8_t num) {
 	if (num == 1) {
@@ -75,6 +85,6 @@ uint32_t KulibinAuto_Sensors::getTiming() {
 	digitalWrite(TRIG_PIN, HIGH);
 	delayMicroseconds(10);
 	digitalWrite(TRIG_PIN, LOW);
-	uint32_t duration = pulseIn(ECHO_PIN, HIGH);
+	uint32_t duration = pulseIn(ECHO_PIN, HIGH, 13000);
 	return duration;
 }

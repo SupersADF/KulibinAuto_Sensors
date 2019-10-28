@@ -33,7 +33,7 @@ private:
 private:
 	uint8_t TRIG_PIN = 13;
 	uint8_t ECHO_PIN = 9;
-	uint8_t SERVO_PIN = 5;
+	uint8_t SERVO_PIN = 11;
 
 	uint8_t REFLECT_1_PIN = A0;
 	uint8_t REFLECT_2_PIN = A1;
